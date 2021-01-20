@@ -1,20 +1,35 @@
-@import 'variables';
+@charset "UTF-8";
 
-html {
-    box-sizing: border-box;
-  }
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
 
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
+// 2. Vendors
+@import
+  'vendors/normalize';
 
-  body {
-    font-family: 'Spartan', sans-serif;
-    font-size: 15px;
-    background-image: url('../images/bg-pattern-top-desktop.svg'), url('../images/bg-pattern-bottom-desktop.svg');
-    background-repeat: no-repeat, no-repeat;
-  }
+// 3. Base stuff
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/helpers';
 
-  
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/footer';
+
+// 5. Components
+@import
+  'components/button';
+
+// 6. Page-specific styles
+@import
+  'pages/home';
+
+// 7. Themes
+@import
+  'themes/default';

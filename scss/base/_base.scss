@@ -1,0 +1,83 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-image: url('../images/bg-pattern-top-desktop.svg'), url('../images/bg-pattern-bottom-desktop.svg');
+  background-repeat: no-repeat, no-repeat;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  text-decoration: none;
+
+  @include on-event {
+    text-decoration: underline;
+  }
+}
+
+.container {
+  text-align: center;
+  & .header {
+    margin-bottom: 50px;
+    &-msg {
+      &-title {
+        color: $very-dark-magenta;
+        font-weight: 700;
+        line-height: 32px;
+        margin: 80px 25px 30px;
+      }
+      &-text {
+        color: $dark-grayish-magenta;
+        font-weight: 500;
+        font-size: 0.95em;
+        line-height: 25px;
+      }
+    }
+    &-stars {
+      font-size: 14px;
+      &-box {
+        background-color: $light-grayish-magenta;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px;
+        &-icon {
+          color: $golden-stars;
+          margin-bottom: 12px;
+          .fa {
+            margin: 0 4px;
+          }
+        }
+        &-text {
+          color: $very-dark-magenta;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  & .articles {
+    background-color: $very-dark-magenta;
+    border-radius: 10px;
+  }
+}
