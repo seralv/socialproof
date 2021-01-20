@@ -77,7 +77,14 @@ a {
     }
   }
   & .articles {
-    background-color: $very-dark-magenta;
-    border-radius: 10px;
+    &-one {
+      @include articles;
+    }
+    &-two {
+      @include articles;
+    }
+    &-three {
+      @include articles;
+    }
   }
 }

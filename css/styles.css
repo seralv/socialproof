@@ -419,9 +419,118 @@ a:hover, a:active, a:focus {
   font-weight: 700;
 }
 
-.container .articles {
+.container .articles-one {
   background-color: #502050;
   border-radius: 10px;
+  margin: 20px;
+  padding: 25px;
+}
+
+.container .articles-one-header {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  font-size: 0.8em;
+  margin-bottom: 30px;
+}
+
+.container .articles-one-header-img {
+  border-radius: 50%;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.container .articles-one-header-info h3 {
+  color: white;
+  margin: 5px 0;
+}
+
+.container .articles-one-header-info p {
+  color: #ee68a4;
+  margin: 0;
+}
+
+.container .articles-one-content {
+  color: white;
+  font-size: 0.8em;
+  line-height: 20px;
+  text-align: left;
+}
+
+.container .articles-two {
+  background-color: #502050;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 25px;
+}
+
+.container .articles-two-header {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  font-size: 0.8em;
+  margin-bottom: 30px;
+}
+
+.container .articles-two-header-img {
+  border-radius: 50%;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.container .articles-two-header-info h3 {
+  color: white;
+  margin: 5px 0;
+}
+
+.container .articles-two-header-info p {
+  color: #ee68a4;
+  margin: 0;
+}
+
+.container .articles-two-content {
+  color: white;
+  font-size: 0.8em;
+  line-height: 20px;
+  text-align: left;
+}
+
+.container .articles-three {
+  background-color: #502050;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 25px;
+}
+
+.container .articles-three-header {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  font-size: 0.8em;
+  margin-bottom: 30px;
+}
+
+.container .articles-three-header-img {
+  border-radius: 50%;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.container .articles-three-header-info h3 {
+  color: white;
+  margin: 5px 0;
+}
+
+.container .articles-three-header-info p {
+  color: #ee68a4;
+  margin: 0;
+}
+
+.container .articles-three-content {
+  color: white;
+  font-size: 0.8em;
+  line-height: 20px;
+  text-align: left;
 }
 
 /**
