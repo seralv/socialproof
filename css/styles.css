@@ -387,6 +387,12 @@ a:hover, a:active, a:focus {
   margin: 80px 25px 30px;
 }
 
+@media (min-width: 768px) {
+  .container .header-msg-title {
+    color: pink;
+  }
+}
+
 .container .header-msg-text {
   color: #937b92;
   font-weight: 500;

@@ -47,6 +47,12 @@ a {
         font-weight: 700;
         line-height: 32px;
         margin: 80px 25px 30px;
+        @include media('medium') {
+          color: pink;
+        }
+        @include media('large') {
+          color: blue;
+        }
       }
       &-text {
         color: $dark-grayish-magenta;

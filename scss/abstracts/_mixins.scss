@@ -32,6 +32,25 @@
   }
 }
 
+/// Mixin for media querys
+@mixin respond-to($breakpoints) {
+  @if $breakpoints == 'small' {
+    @media (min-width: 320px) {
+      @content;
+    }
+  }
+  @else if $breakpoints == 'medium' {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @else if $breakpoints == 'large' {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+}
+
 /// Articles format
 @mixin articles() {
   background-color: $very-dark-magenta;
