@@ -1,0 +1,75 @@
+/// Event wrapper
+@mixin on-event($self: false) {
+    @if $self {
+      &,
+      &:hover,
+      &:active,
+      &:focus {
+        @content;
+      }
+    } @else {
+      &:hover,
+      &:active,
+      &:focus {
+        @content;
+      }
+    }
+}
+
+/// Mixin for media querys
+@mixin respond-to($breakpoints) {
+    @if $breakpoints == 'small' {
+      @media (min-width: 320px) {
+        @content;
+      }
+    }
+    @else if $breakpoints == 'medium' {
+      @media (min-width: 768px) {
+        @content;
+      }
+    }
+    @else if $breakpoints == 'large' {
+      @media (min-width: 1024px) {
+        @content;
+      }
+    }
+}
+
+/// Articles format
+@mixin articles() {
+    background-color: $very-dark-magenta;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 25px;
+    @include respond-to('large'){
+      height: 270px;
+    }
+    &-header {
+      display: flex;
+      align-items: center;
+      text-align: left;
+      font-size: 0.8em;
+      margin-bottom: 30px;
+      &-img {
+        border-radius: 50%;
+        height: 100%;
+        margin-right: 10px;
+      }
+      &-info {
+        h3 {
+          color: $white;
+          margin: 5px 0;
+        }
+        p {
+          color: $soft-pink;
+          margin: 0;
+        }
+      }
+    }
+    &-content {
+      color: white;
+      font-size: 0.8em;
+      line-height: 20px;
+      text-align: left;
+    }
+}

@@ -1,0 +1,114 @@
+main {
+  text-align: center;
+  & .header {
+    margin-bottom: 50px;
+    @include respond-to('large'){
+      display: flex;
+      padding: 80px 80px 10px 80px;
+      margin: 0;
+    }
+    &-msg {
+      @include respond-to('large'){
+        width: 50%;
+        text-align: left;
+        padding-right: 50px;
+      }
+      &-title {
+        color: $very-dark-magenta;
+        font-weight: 700;
+        line-height: 32px;
+        margin: 80px 30px 30px 30px;
+        @include respond-to('large'){
+          margin: 0 50px 0 0;
+        }
+      }
+      &-text {
+        color: $dark-grayish-magenta;
+        font-weight: 500;
+        font-size: 0.95em;
+        line-height: 25px;
+        margin: 0 30px;
+        @include respond-to('large'){
+          font-size: 0.71em;
+          margin: 20px 15px 0  0;
+        }
+      }
+    }
+    &-stars {
+      font-size: 14px;
+      @include respond-to('large'){
+        width: 50%;
+        font-size: 11px;
+        display: flex;
+        flex-direction: column;
+      }
+      &-box {
+        background-color: $light-grayish-magenta;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px;
+        @include respond-to('large'){
+          width: 345px;
+          display: flex;
+          margin: 10px;
+        }
+        &-icon {
+          color: $golden-stars;
+          margin-bottom: 12px;
+          @include respond-to('large'){
+            margin-bottom: 0;
+            padding: 0 10px;
+          }
+          .fa {
+            margin: 0 4px;
+          }
+        }
+        &-text {
+          color: $very-dark-magenta;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .box-1{
+    @include respond-to('large'){
+      align-self: flex-start;
+    }
+  }
+  .box-2{
+    @include respond-to('large'){
+      align-self: center;
+    }
+  }
+  .box-3{
+    @include respond-to('large'){
+      align-self: flex-end
+    }
+  }
+  & .articles {
+    @include respond-to('large'){
+      height: 350px;
+      margin-bottom: 50px;
+      padding: 0 60px;
+      display: flex;
+    }
+    &-one {
+      @include articles;
+      @include respond-to('large'){
+        align-self: flex-start;
+      }
+    }
+    &-two {
+      @include articles;
+      @include respond-to('large'){
+        align-self: center;
+      }
+    }
+    &-three {
+      @include articles;
+      @include respond-to('large'){
+        align-self: flex-end;
+      }
+    }
+  }
+}
